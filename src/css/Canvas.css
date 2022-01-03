@@ -1,0 +1,54 @@
+.sg-canvas-wrapper {
+    padding: 40px 10px;
+    background: #2d2d2d;
+    max-width: 330px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 20px;
+}
+.sg-canvas{
+    display:flex;
+    justify-content: center;
+    height: 120px;
+    overflow: hidden;
+}
+
+.sg-reel-wrapper{
+    border: 5px solid #d2a933;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background: #fcf4c6;
+}
+.sg-canvas .sg-reel-wrapper:nth-child(2) {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#reel1, #reel2, #reel3{
+    width: auto;
+    background: #fcf4c6;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;    
+}
+.sq-reel-overflow {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, black 0%, transparent 25%, transparent 75%, black 100%);
+    z-index: 1;
+    top: 0;
+    opacity: 70%;
+}
+canvas.motion {
+    animation: .5s linear -1s infinite running spin;
+}
+
+
+@keyframes spin {
+   0% {
+        transform: translate3d(0px, 0, 0px);
+    }
+   100% {
+        transform: translate3d(0px, -540px, 0px);
+    }
+  }

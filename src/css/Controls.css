@@ -1,0 +1,121 @@
+.sg-coins {
+    text-align: right;
+    margin-top: 10px;
+}
+.sg-amounts {
+    display: flex;
+    justify-content: flex-end;
+}
+.sg-amounts__result {
+    width: 60px;
+    height: 55px;
+    background: black;
+    border: 5px solid #5b5b5b;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    display: flex;
+    margin-bottom: 5px;
+}
+.sg-amounts div:last-of-type{
+    margin-left: 10px;
+}
+.sg-amounts__winner{
+    width: 150px;
+}
+p.sg-amounts__text {
+    margin: 5px 0 10px;
+    text-align: center;
+    font-size: 13px;
+}
+.sg-main-controls{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.sg-main-controls button{
+    display: flex;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 600;
+    transition: .2s all;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+.sg-main-controls__bets{
+    background: red;
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+}
+.sg-main-controls__bets:hover{
+    cursor: pointer;
+    background: darkred;
+}
+.sg-main-controls__spin{
+    background: green;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 75px;
+    height: 75px;
+    margin-left: 30px;
+    font-size: 26px;
+}
+.sg-main-controls__spin:hover{
+    cursor: pointer;
+    background: darkgreen;
+}
+.gameOver, .winMsg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    background: white;
+    height: 90%;
+    width: 90%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .7;
+}
+.winMsg p {
+    color: black;
+    font-weight: 800;
+    animation: .8s linear .4s growFontSize;
+    font-size: 24px;
+}
+.gameOver p{
+    color: red;
+    font-weight: 800;
+    animation: .6s linear .4s loseAnimation;
+    font-size: 35px;
+}
+.closeBtn{
+    position: absolute;
+    right: 5px;
+    top: 5px
+}
+@keyframes growFontSize {
+    0% {
+         font-size: 1px;
+     }
+    100% {
+         font-size: 25px;
+     }
+   }
+
+@keyframes loseAnimation {
+0% {
+        font-size: 1px;
+        transform: rotate(0)
+    }
+100% {
+        font-size: 35px;
+        transform: rotate(360)
+    }
+}

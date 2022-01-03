@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Gothic A1', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+}
+body {
+  margin: 0;
+  padding: 10px 0;
+  background: black;
+}
+.App {
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
